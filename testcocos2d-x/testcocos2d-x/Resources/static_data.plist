@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>sound_bullet</key>
+	<string>bullet.mp3</string>
+	<key>enemy1_down</key>
+	<string>enemy1_down.mp3</string>
+	<key>enemy2_down</key>
+	<string>enemy2_down.mp3</string>
+	<key>enemy2_out</key>
+	<string>enemy2_out.mp3</string>
+	<key>enemy3_down</key>
+	<string>enemy3_down.mp3</string>
+	<key>game_over</key>
+	<string>game_over.mp3</string>
+	<key>score</key>
+	<string>0</string>
+	<key>bg_music</key>
+	<string>game_music.mp3</string>
+</dict>
+</plist>
