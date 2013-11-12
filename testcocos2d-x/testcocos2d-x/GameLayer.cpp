@@ -100,7 +100,7 @@ bool GameLayer::init()
 void GameLayer::initData() {
     adjustmentBG = 0;
     bulletSum = 0;
-    isBigBullet = true;
+    isBigBullet = false;
     isChangeBullet = false;
     bulletTiming = 900;
     bulletSpeed = 25;
@@ -111,11 +111,14 @@ void GameLayer::initData() {
     score = 10000;
     isVisible = false;
     isGameOver = false;
-//    this->setProp(NULL);
-//    this->setFoePlanes(NULL);
-    this->setFoePlanes(CCArray::create());
+    
+    addplane = 0;
+    addspeed = 0;
+    jgtime = 6000;
+    
 
-    //foePlanes->retain();
+
+    this->setFoePlanes(CCArray::create());
     
 }
 void GameLayer::menuCloseCallback(CCObject* pSender)
@@ -197,7 +200,7 @@ void GameLayer::secondMenuCallback(CCObject* pSender)
 //    return bigFoePlane;
 //}
 
-GameLayer::GameLayer()
+GameLayer::GameLayer():__foePlanes(NULL),__prop(NULL)
 {
 
 }
@@ -218,6 +221,10 @@ void GameLayer::update(float delta)
         this->makeProps();
         this->bulletTimingFn();
         this->resetProps();
+        
+        this->levelTimingFn();
+        
+        
     }
     
 //    this->backgrouneScroll();
@@ -267,21 +274,21 @@ void GameLayer::addFoePlane()
     smallPlan++;
     mediumPlan++;
     
-    if (bigPlan>500) {
+    if (bigPlan>500-addplane) {
         CCFoePlane *foePlane = this->makeBigFoePlane();
         this->addChild(foePlane,3);
         this->getFoePlanes()->addObject(foePlane);
         bigPlan = 0;
     }
     
-    if (mediumPlan>400) {
+    if (mediumPlan>400-addplane) {
         CCFoePlane *foePlane = this->makeMediumFoePlane();
         this->addChild(foePlane,3);
         this->getFoePlanes()->addObject(foePlane);
         mediumPlan = 0;
     }
     
-    if (smallPlan>45) {
+    if (smallPlan>45-addplane) {
         CCFoePlane *foePlane = this->makeSmallFoePlane();
         this->addChild(foePlane,3);
         this->getFoePlanes()->addObject(foePlane);
@@ -315,7 +322,7 @@ CCFoePlane* GameLayer::makeBigFoePlane()
     bigFoePlane->planeType = 2;
     bigFoePlane->hp = 30;
     bigFoePlane->runAction(CCRepeatForever::create(actPlayer));
-    bigFoePlane->speed = (arc4random()%2)+2 ;
+    bigFoePlane->speed = (arc4random()%2)+2+addspeed ;
     bigFoePlane->__id = __cnt++;
     return bigFoePlane;
 }
@@ -327,7 +334,7 @@ CCFoePlane* GameLayer::makeMediumFoePlane()
     mediumFoePlane->setPosition(ccp((arc4random()%268)+23, 732));
     mediumFoePlane->planeType=3;
     mediumFoePlane->hp=15;
-    mediumFoePlane->speed = (arc4random()%3)+2;
+    mediumFoePlane->speed = (arc4random()%3)+2+addspeed;
     mediumFoePlane->__id = __cnt++;
     return mediumFoePlane;
 }
@@ -339,7 +346,7 @@ CCFoePlane* GameLayer::makeSmallFoePlane()
     smallFoePlane->setPosition(ccp((arc4random()%240)+17, 732));
     smallFoePlane->planeType=1;
     smallFoePlane->hp=1;
-    smallFoePlane->speed=(arc4random()%4)+2;
+    smallFoePlane->speed=(arc4random()%4)+2+addspeed;
     smallFoePlane->__id = __cnt++;
     return smallFoePlane;
 }
@@ -348,7 +355,7 @@ CCFoePlane* GameLayer::makeSmallFoePlane()
 void GameLayer::makeProps()
 {
     props++;
-    if (props>500) {
+    if (props>500&&!isVisible) {
 //        int retaincount = this->getProp()->retainCount();
         
         this->setProp(CCProps::create());
@@ -366,7 +373,12 @@ void GameLayer::resetProps()
 {
     if (isVisible) {
         if(this->getProp()->getProp()->getPositionY() < -75){
+            
+            this->getProp()->getProp()->stopAllActions();
+            this->getProp()->getProp()->removeFromParentAndCleanup(false);
+            
             isVisible = false;
+            CC_SAFE_RELEASE_NULL(__prop);
             CCLog("==============  没接住道具, 出了底屏");
         }
     }
@@ -386,6 +398,20 @@ void GameLayer::bulletTimingFn()
             bulletTiming = 900;
         }
     }
+}
+
+// 难度间隔时间
+void GameLayer::levelTimingFn()
+{
+
+        if (jgtime>0) {
+            jgtime--;
+        }else {
+            addplane = 2;
+            addspeed = 1;
+            jgtime = 1000;
+        }
+   
 }
 
 
@@ -634,6 +660,7 @@ void GameLayer::collisionDetection()
                 }
                 this->getFoePlanes()->removeAllObjects();
             }
+            CC_SAFE_RELEASE_NULL(__prop);
         }
     }
     
@@ -775,14 +802,41 @@ void GameLayer::gameOver()
         CCNode *node = (CCNode *)nodeObj;
         node->stopAllActions();
     }
+    //设置成绩
+    bool isGood = false;
+    int lastScore =UserData::sharedUserData()->getScore();
+    if(this->score>UserData::sharedUserData()->getScore())
+    {
+    isGood = true;
+    UserData::sharedUserData()->alertScore(this->score);
+    }
     
     CCLabelTTF *gameOverLabel = CCLabelTTF::create("太空大战" ,"MarkerFelt-Thin",35);
-    gameOverLabel->setPosition(ccp(160, 300));
+    gameOverLabel->setPosition(ccp(160, 400));
     this->addChild(gameOverLabel,4);
     
-    CCLabelTTF *scoreLabel = CCLabelTTF::create(CCString::createWithFormat("%d",this->score)->getCString() ,"MarkerFelt-Thin",25,CCSizeMake(200, 0), kCCTextAlignmentCenter);
+    CCLabelTTF *scoreLabel = CCLabelTTF::create(CCString::createWithFormat("本次%d",this->score)->getCString() ,"MarkerFelt-Thin",25,CCSizeMake(200, 0), kCCTextAlignmentCenter);
     scoreLabel->setPosition(ccp(160, 250));
     this->addChild(scoreLabel,4);
+    
+    if (UserData::sharedUserData()->getScore()>0) {
+        CCLabelTTF *scoreLabel = CCLabelTTF::create(CCString::createWithFormat("最高记录：%d",UserData::sharedUserData()->getScore())->getCString() ,"MarkerFelt-Thin",25,CCSizeMake(200, 0), kCCTextAlignmentCenter);
+        scoreLabel->setPosition(ccp(160, 350));
+        this->addChild(scoreLabel,4);
+    }
+    
+    if (isGood) {
+        CCLabelTTF *scoreLabel = CCLabelTTF::create(CCString::createWithFormat("恭喜你超越了最高记录%d！",lastScore)->getCString() ,"MarkerFelt-Thin",25,CCSizeMake(280, 0), kCCTextAlignmentCenter);
+        scoreLabel->setPosition(ccp(160, 300));
+        this->addChild(scoreLabel,4);
+    }
+    else
+    {
+        CCLabelTTF *scoreLabel = CCLabelTTF::create("加油哦！" ,"MarkerFelt-Thin",25,CCSizeMake(200, 0), kCCTextAlignmentCenter);
+        scoreLabel->setPosition(ccp(160, 300));
+        this->addChild(scoreLabel,4);
+    
+    }
     
     CCMenuItemFont *gameOverItem = CCMenuItemFont::create("重玩", this, menu_selector(GameLayer::restartGame));
     gameOverItem->setFontName("MarkerFelt-Thin");
@@ -790,11 +844,16 @@ void GameLayer::gameOver()
     CCMenu *restart = CCMenu::create(gameOverItem,NULL);
     restart->setPosition(ccp(160, 200));
     this->addChild(restart,4);
+    
+    //添加触摸事件
+    this->setTouchEnabled(false);
 }
 
 
 void GameLayer::restartGame()
 {
+    //添加触摸事件
+    this->setTouchEnabled(true);
     //__cnt = 1;
     this->removeAllChildrenWithCleanup(false);
 

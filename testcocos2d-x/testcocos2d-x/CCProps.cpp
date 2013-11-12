@@ -12,6 +12,7 @@
 
 CCProps::CCProps():_prop(NULL)
 {
+    CCLog("CCProps::CCProps");
 }
 
 CCProps::~CCProps()

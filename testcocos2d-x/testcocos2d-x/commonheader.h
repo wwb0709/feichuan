@@ -11,6 +11,7 @@
 #include "cocos2d.h"
 #include "cocos-ext.h"
 #include "StaticData.h"
+#include "UserData.h"
 
 #define WINDOWHEIGHT CCDirector::sharedDirector()->getWinSize().height
 #define WINDOWWIDTH CCDirector::sharedDirector()->getWinSize().width

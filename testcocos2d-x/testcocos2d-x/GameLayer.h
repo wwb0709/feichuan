@@ -113,6 +113,13 @@ public:
     
     // 退出应用
     void logout();
+    
+//    // 调整难度
+//    void changLevel();
+    
+    // 难度间隔时间
+    void levelTimingFn();
+    
 private:
     
     bool changedirct;//是否改变方向
@@ -163,6 +170,14 @@ private:
     int props;
     // 是否存在
     bool isVisible;
+    
+    
+    //增量
+    int addplane;//增加战机数量
+    int addspeed;//增加速度
+    
+    int jgtime;//增加难度的间隔时间
+    
 
 };
 

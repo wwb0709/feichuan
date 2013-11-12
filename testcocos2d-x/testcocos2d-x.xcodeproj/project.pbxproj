@@ -1973,7 +1973,7 @@
 				INFOPLIST_FILE = "testcocos2d-x/Resources/Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/wwb/Desktop/testcocos2d-x/testcocos2d-x/libs/cocos2dx/platform/third_party/ios/libraries",
+					"/Users/wwb/Desktop/feichuan/testcocos2d-x/testcocos2d-x/libs/cocos2dx/platform/third_party/ios/libraries",
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",
@@ -1995,7 +1995,7 @@
 				INFOPLIST_FILE = "testcocos2d-x/Resources/Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/wwb/Desktop/testcocos2d-x/testcocos2d-x/libs/cocos2dx/platform/third_party/ios/libraries",
+					"/Users/wwb/Desktop/feichuan/testcocos2d-x/testcocos2d-x/libs/cocos2dx/platform/third_party/ios/libraries",
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",

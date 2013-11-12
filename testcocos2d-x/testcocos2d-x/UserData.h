@@ -14,7 +14,7 @@
 
 
 
-class UserData : public CCObject
+class UserData : public cocos2d::CCObject
 {
 protected:
     UserData();//构造函数

@@ -58,8 +58,9 @@ bool AppDelegate::applicationDidFinishLaunching()
 //    CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic(STATIC_DATA_STRING("bg_music"));
 //    CocosDenshion::SimpleAudioEngine::sharedEngine()->setBackgroundMusicVolume(1);
 //    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(STATIC_DATA_STRING("bg_music"),true);
- 
-        PersonalAudioEngine::sharedEngine()->playBackgroundMusic(STATIC_DATA_STRING("bg_music"),true);
+//     CocosDenshion::SimpleAudioEngine::sharedEngine()->preloadBackgroundMusic(STATIC_DATA_STRING("bg_music"));
+//    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic(STATIC_DATA_STRING("bg_music"),true);
+//    CocosDenshion::SimpleAudioEngine::sharedEngine()->setBackgroundMusicVolume(0.5);
 
     return true;
 }
@@ -70,7 +71,7 @@ void AppDelegate::applicationDidEnterBackground()
     CCDirector::sharedDirector()->pause();
 
     // if you use SimpleAudioEngine, it must be paused
-     CocosDenshion::SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
+CocosDenshion::SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
 }
 
 // this function will be called when the app is active again
@@ -79,5 +80,5 @@ void AppDelegate::applicationWillEnterForeground()
     CCDirector::sharedDirector()->resume();
     
     // if you use SimpleAudioEngine, it must resume here
-     CocosDenshion::SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
+CocosDenshion::SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
 }

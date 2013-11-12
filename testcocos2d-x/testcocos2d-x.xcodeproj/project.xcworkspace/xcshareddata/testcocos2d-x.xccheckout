@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8CE28FA1-CCC4-4C01-B253-8683F3ACE678</string>
+	<key>IDESourceControlProjectName</key>
+	<string>testcocos2d-x</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>A8346489-0445-442F-A28C-032B17F8D120</key>
+		<string>https://github.com/wwb0709/feichuan.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>testcocos2d-x/testcocos2d-x.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>A8346489-0445-442F-A28C-032B17F8D120</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/wwb0709/feichuan.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>A8346489-0445-442F-A28C-032B17F8D120</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>A8346489-0445-442F-A28C-032B17F8D120</string>
+			<key>IDESourceControlWCCName</key>
+			<string>feichuan</string>
+		</dict>
+	</array>
+</dict>
+</plist>

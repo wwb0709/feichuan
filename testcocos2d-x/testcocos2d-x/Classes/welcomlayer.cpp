@@ -92,10 +92,10 @@ bool welcomlayer::init()
     
     //this->scoreLabel->setString(CCString::createWithFormat("%u",score)->getCString());
     this->addChild(scoreLabel,4);
-    
-    //初始化数据
-    UserData::sharedUserData();
-    PersonalAudioEngine::sharedEngine();
+//    
+//    //初始化数据
+//    UserData::sharedUserData();
+//    PersonalAudioEngine::sharedEngine();
     return true;
     
     //画上文字 CCLabelTTF::create("Hello World", "Thonburi", 34);
@@ -300,7 +300,7 @@ void welcomlayer::beginGame()
     //    作用： 创建一个跳动的过渡动画
     //    参数1：过渡动作的时间
     //    参数2：切换到目标场景的对象
-        reScene = CCTransitionJumpZoom ::create(t , s);
+//        reScene = CCTransitionJumpZoom ::create(t , s);
     //    CCDirector::sharedDirector()->replaceScene(reScene);
     
     //    CCTransitionProgressRadialCCW
@@ -393,8 +393,8 @@ void welcomlayer::beginGame()
     //    作用：创建一个随机方格消失的过渡动画
     //    参数1：过渡动作的持续时间
     //    参数2：切换的目标场景的对象
-    //    reScene= CCTransitionTurnOffTiles::create(t, s);
-    //    CCDirector::sharedDirector()->replaceScene(reScene);
+        reScene= CCTransitionTurnOffTiles::create(t, s);
+        CCDirector::sharedDirector()->replaceScene(reScene);
     
     //    CCTransitionSplitRows
     //    作用：创建一个分行划分切换的过渡动画
@@ -536,7 +536,7 @@ void welcomlayer::beginGame()
     //    参数1：过渡动作的持续时间
     //    参数2：切换的目标场景的对象
     //reScene  =CCTransitionSlideInB::create(t, s);
-    CCDirector::sharedDirector()->replaceScene(reScene);
+//    CCDirector::sharedDirector()->replaceScene(reScene);
 
 
 }

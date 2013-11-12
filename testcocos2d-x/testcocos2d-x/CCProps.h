@@ -14,7 +14,7 @@ typedef enum{
     propsTypeBullet = 5
 }propsType;
 
-class CCProps : public CCNode
+class CCProps : public CCObject
 {
     public:
         CCProps();

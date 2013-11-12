@@ -54,7 +54,8 @@ void UserData::purge()
 void UserData::alertScore(int delta)
 {
 
-    this->setScore(this->getScore()+delta);
+    this->setScore(delta);
+    this->flush();
 
 }
 
