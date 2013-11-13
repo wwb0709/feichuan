@@ -30,6 +30,7 @@
 		D05F07C5182B61DB00A65227 /* StaticData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D05F07C3182B61DB00A65227 /* StaticData.cpp */; };
 		D05F07C8182B6F1200A65227 /* PersonalAudioEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D05F07C6182B6F1200A65227 /* PersonalAudioEngine.cpp */; };
 		D05F07CA182B710A00A65227 /* static_data.plist in Resources */ = {isa = PBXBuildFile; fileRef = D05F07C9182B710A00A65227 /* static_data.plist */; };
+		D07381F1183318AF008488E8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D07381F0183318AF008488E8 /* Default-568h@2x.png */; };
 		D0E98E77180D2E9A00343CC9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E98E76180D2E9A00343CC9 /* QuartzCore.framework */; };
 		D0E98E79180D2E9A00343CC9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E98E78180D2E9A00343CC9 /* OpenGLES.framework */; };
 		D0E98E7B180D2E9A00343CC9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E98E7A180D2E9A00343CC9 /* OpenAL.framework */; };
@@ -259,6 +260,7 @@
 		D05F07C6182B6F1200A65227 /* PersonalAudioEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PersonalAudioEngine.cpp; sourceTree = "<group>"; };
 		D05F07C7182B6F1200A65227 /* PersonalAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalAudioEngine.h; sourceTree = "<group>"; };
 		D05F07C9182B710A00A65227 /* static_data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = static_data.plist; path = Resources/static_data.plist; sourceTree = "<group>"; };
+		D07381F0183318AF008488E8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
 		D0E98E73180D2E9A00343CC9 /* testcocos2d-x.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "testcocos2d-x.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E98E76180D2E9A00343CC9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D0E98E78180D2E9A00343CC9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -780,6 +782,7 @@
 		D0E98E87180D2E9A00343CC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D07381F0183318AF008488E8 /* Default-568h@2x.png */,
 				D05F07B7182B5D6000A65227 /* game_music.mp3 */,
 				D05F07C9182B710A00A65227 /* static_data.plist */,
 				D05F07B1182B5D6000A65227 /* music */,
@@ -1682,6 +1685,7 @@
 				D0E98E89180D2E9A00343CC9 /* CloseNormal.png in Resources */,
 				D0E98E95180D2E9A00343CC9 /* Icon-Small.png in Resources */,
 				D05F07BF182B5D6000A65227 /* game_over.mp3 in Resources */,
+				D07381F1183318AF008488E8 /* Default-568h@2x.png in Resources */,
 				D0E98E91180D2E9A00343CC9 /* Icon-72.png in Resources */,
 				D05F07BD182B5D6000A65227 /* enemy3_down.mp3 in Resources */,
 				D023FAE318224A83004B3CF7 /* normal.png in Resources */,

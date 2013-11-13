@@ -27,12 +27,40 @@ AppDelegate::~AppDelegate()
 
 bool AppDelegate::applicationDidFinishLaunching()
 {
+    std::map <int, int> m1, m2, m3;
+    std::map <int, int>::iterator m1_Iter;
+    m1[1]=10;
+    m1[4]=11;
+    m1[3]=2;
+
+     std::map<int, int>::reverse_iterator iter = m1.rbegin();
+//    　　m1.insert ( pair<int, int> ( 1, 10 ) );
+//    　　m1.insert ( pair <int, int> ( 2, 20 ) );
+//    　　m1.insert ( pair <int, int> ( 3, 30 ) );
+//    　　m2.insert ( pair <int, int> ( 10, 100 ) );
+//    　　m2.insert ( pair <int, int> ( 20, 200 ) );
+//    　　m3.insert ( pair <int, int> ( 30, 300 ) );
+    m1_Iter = m1.begin( );
+    int c= iter->first;
+    c = iter->second;
+    
+    CCFileUtils::sharedFileUtils()->setResourceDirectory("iphone");
+    const char* ch = CCFileUtils::sharedFileUtils()->getResourceDirectory();
+ 
+    
     // initialize director
     CCDirector *pDirector = CCDirector::sharedDirector();
     CCEGLView* pEGLView = CCEGLView::sharedOpenGLView();
     pDirector->setOpenGLView(pEGLView);
+    CCSize size = pDirector->getWinSize();
+    
     pEGLView->setDesignResolutionSize(320, 480, kResolutionShowAll);
-
+    size = pDirector->getWinSize();
+    
+    
+    
+    CCSize frameSize = pEGLView->getFrameSize();
+    
     // turn on display FPS
 //    pDirector->setDisplayStats(true);
 
