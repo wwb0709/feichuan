@@ -42,6 +42,9 @@ void UserData::flush()
 {
     CCUserDefault::sharedUserDefault()->setIntegerForKey("score", this->getScore());
     CCUserDefault::sharedUserDefault()->setStringForKey("name", this->getName());
+    CCUserDefault::sharedUserDefault()->setIntegerForKey("musicvolume", this->getMusicVolume());
+    CCUserDefault::sharedUserDefault()->setIntegerForKey("soundvolume", this->getSoundVolume());
+    
     CCUserDefault::sharedUserDefault()->flush();
     CCUserDefault::sharedUserDefault()->purgeSharedUserDefault();
 }

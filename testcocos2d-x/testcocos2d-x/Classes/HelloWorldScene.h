@@ -2,6 +2,11 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "commonheader.h"
+#include "GameLayer.h"
+#include "SettingLayer.h"
+
+
+
 class HelloWorld : public CCLayer
 {
 public:
@@ -11,19 +16,37 @@ public:
     // there's no 'id' in cpp, so we recommend to return the class instance pointer
     static CCScene* scene();
     
-    // a selector callback
-    void menuCloseCallback(CCObject* pSender);
+ 
+    
+    void menuSettingCallback(CCObject* pSender);
 
     // preprocessor macro for "static create()" constructor ( node() deprecated )
     CREATE_FUNC(HelloWorld);
     
-    void logout();
+
     
     void onExit();
 //    void onEnter();
     
+    //退出
+    void quitGame();
+    //暂停
+    void pause();
+    //继续
+    void resume();
+    //重新开始
+    void restart();
     
-    virtual void update(float delta);
+    void operateAllSchedulerAndActions(CCNode* node, OperateFlag flag);
+    
+   
+public:
+    
+    GameLayer* gameLayer;
+    SettingLayer* settingLayer;
+    
+    
+    CCMenu* pSettingMenu;
     
     
 //    void onEnterTransitionDidFinish();

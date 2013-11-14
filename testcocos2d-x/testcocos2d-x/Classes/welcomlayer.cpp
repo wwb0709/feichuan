@@ -28,7 +28,7 @@ welcomlayer::~welcomlayer()
 }
 
 void welcomlayer::update(float delta){
-    this->backgrouneScroll();
+    this->updateProgressBar();
 }
 
 // 载入背景
@@ -72,7 +72,7 @@ bool welcomlayer::init()
 //    CCSpriteBatchNode *spriteBatch = CCSpriteBatchNode::createWithTexture(texture);
 //    this->addChild(spriteBatch);
 //
-    
+
     //加载默认页面
     
     
@@ -96,6 +96,9 @@ bool welcomlayer::init()
 //    //初始化数据
 //    UserData::sharedUserData();
 //    PersonalAudioEngine::sharedEngine();
+    
+   this->addProgressBar();
+
     return true;
     
     //画上文字 CCLabelTTF::create("Hello World", "Thonburi", 34);
@@ -181,7 +184,9 @@ bool welcomlayer::init()
     
                             
 //    this->loadBackground();
-//    this->scheduleUpdate();
+
+    
+
     
     return true;
 }
@@ -275,15 +280,98 @@ void welcomlayer::editBoxReturn(cocos2d::extension::CCEditBox* editBox)
     
     CCLOG("editBoxReturn--------content:%s tag:%d",editBox->getText(),editBox->getTag());
 }
-void welcomlayer::onEnter()
+//void welcomlayer::onEnter()
+//{
+////    CCScene *pScene = HelloWorld::scene();
+////    CCTransitionFade* transitionScene = CCTransitionFade::create(1.0, pScene,ccWHITE);
+////    CCDirector::sharedDirector()->replaceScene(transitionScene);
+//    
+//    beginGame();
+//}
+
+void welcomlayer::addProgressBar()
 {
-//    CCScene *pScene = HelloWorld::scene();
-//    CCTransitionFade* transitionScene = CCTransitionFade::create(1.0, pScene,ccWHITE);
-//    CCDirector::sharedDirector()->replaceScene(transitionScene);
+    CCSprite *progressbgSprite=CCSprite::create("progress_bg.png");
     
-    beginGame();
+    progressbgSprite->setPosition(ccp(160, 30));
+    progressbgSprite->setAnchorPoint(ccp(0.5,0.5));
+    
+    this->addChild(progressbgSprite, 5);
+    
+    
+    CCSprite *progressSprite=CCSprite::create("progress_bar.png");
+    
+    progress1=CCProgressTimer::create(progressSprite);
+    
+    progress1->setType(kCCProgressTimerTypeBar);
+    
+    progress1->setPosition(ccp(160, 30));
+    progress1->setAnchorPoint(ccp(0.5,0.5));
+    
+    //进度动画运动方向，可以多试几个值，看看效果
+    progress1->setMidpoint(ccp(0, 0));
+    
+    //进度条宽高变化
+    progress1->setBarChangeRate(ccp(1, 0));
+    
+    progress1->setPercentage(0);
+    
+    this->addChild(progress1, 5);
+    
+    
+    numsTTF=CCLabelTTF::create("0", "Thonburi", 18.0, CCSizeMake(200, 0), kCCTextAlignmentCenter);
+    
+    numsTTF->setColor(ccRED);
+    numsTTF->setPosition(ccp(160, 30));
+    numsTTF->setAnchorPoint(ccp(0.5,0.5));
+    
+    
+    this->addChild(numsTTF,5);
+    
+    
+    //加载背景音乐和音效
+    PersonalAudioEngine::sharedEngine();
+    this->scheduleUpdate();
+
 }
 
+void welcomlayer::updateProgressBar()
+{
+
+    
+    float cu=progress1->getPercentage();
+    
+    
+    cu=cu+2.1f;
+    
+    
+    progress1->setPercentage(cu);
+    
+    
+    CCString *str = CCString::createWithFormat("%.2f%%",cu);
+    
+    numsTTF->setString(str->getCString());
+    
+    if (cu >100) {
+        this->unscheduleUpdate();
+        //设置音效
+       PersonalAudioEngine::sharedEngine()->playBackgroundMusic(STATIC_DATA_STRING("bg_music"),true);
+//    PersonalAudioEngine::sharedEngine()->setBackgroundMusicVolume(0.5);
+        
+        float flag = UserData::sharedUserData()->getSoundVolume();
+        PersonalAudioEngine::sharedEngine()->setEffectsVolume(flag);
+        
+        float flag2 = UserData::sharedUserData()->getMusicVolume();
+        PersonalAudioEngine::sharedEngine()->setBackgroundMusicVolume(flag2);
+
+        beginGame();
+        
+    }
+    
+    
+    
+    
+}
 void welcomlayer::beginGame()
 {
     CCLog("beginGame");

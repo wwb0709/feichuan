@@ -27,6 +27,11 @@ public:
     void myMenuCallback(CCObject* pSender);
 
     void secondMenuCallback(CCObject* pSender);
+    //暂停游戏
+    void pauseGame();
+    //继续游戏
+    void resumeGame();
+    
     
     // 造大飞机
     CCFoePlane* makeBigFoePlane();

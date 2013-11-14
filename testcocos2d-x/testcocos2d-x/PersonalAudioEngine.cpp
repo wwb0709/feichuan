@@ -42,8 +42,8 @@ void PersonalAudioEngine::purge()
 bool PersonalAudioEngine::init()
 {
     this->preloadBackgroundMusic(STATIC_DATA_STRING("bg_music"));
-//    this->preloadEffect(STATIC_DATA_STRING("sound_bullet"));
-//    this->preloadEffect(STATIC_DATA_STRING("game_over"));
+    this->preloadEffect(STATIC_DATA_STRING("sound_bullet"));
+    this->preloadEffect(STATIC_DATA_STRING("game_over"));
     
     this->setBackgroundMusicVolume(UserData::sharedUserData()->getMusicVolume());
     this->setEffectsVolume(UserData::sharedUserData()->getSoundVolume());

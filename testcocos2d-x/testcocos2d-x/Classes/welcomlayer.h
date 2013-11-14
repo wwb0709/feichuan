@@ -25,7 +25,7 @@ public:
     CREATE_FUNC(welcomlayer);
     virtual bool init();
     virtual void update(float delta);
-    virtual void onEnter();
+//    virtual void onEnter();
     static CCScene* scene();
     void loadBackground();
     void backgrouneScroll();
@@ -33,6 +33,9 @@ public:
     
     
     void beginGame();
+    
+    void addProgressBar();
+    void updateProgressBar();
     
     
     //开始进入编辑
@@ -43,6 +46,10 @@ public:
     virtual void editBoxTextChanged(CCEditBox* editBox, const std::string& text);
     //当触发return后的回调函数
     virtual void editBoxReturn(CCEditBox* editBox);
+    
+private:
+    CCProgressTimer* progress1;
+    CCLabelTTF* numsTTF;
 };
 
 #endif /* defined(__testcocos2d_x__welcomlayer__) */

@@ -31,6 +31,9 @@
 		D05F07C8182B6F1200A65227 /* PersonalAudioEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D05F07C6182B6F1200A65227 /* PersonalAudioEngine.cpp */; };
 		D05F07CA182B710A00A65227 /* static_data.plist in Resources */ = {isa = PBXBuildFile; fileRef = D05F07C9182B710A00A65227 /* static_data.plist */; };
 		D07381F1183318AF008488E8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D07381F0183318AF008488E8 /* Default-568h@2x.png */; };
+		D07384D718334DC6008488E8 /* progress_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D07384D518334DC6008488E8 /* progress_bar.png */; };
+		D07384D818334DC6008488E8 /* progress_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D07384D618334DC6008488E8 /* progress_bg.png */; };
+		D07384DB18335CEA008488E8 /* SettingLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D07384D918335CEA008488E8 /* SettingLayer.cpp */; };
 		D0E98E77180D2E9A00343CC9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E98E76180D2E9A00343CC9 /* QuartzCore.framework */; };
 		D0E98E79180D2E9A00343CC9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E98E78180D2E9A00343CC9 /* OpenGLES.framework */; };
 		D0E98E7B180D2E9A00343CC9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E98E7A180D2E9A00343CC9 /* OpenAL.framework */; };
@@ -261,6 +264,10 @@
 		D05F07C7182B6F1200A65227 /* PersonalAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalAudioEngine.h; sourceTree = "<group>"; };
 		D05F07C9182B710A00A65227 /* static_data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = static_data.plist; path = Resources/static_data.plist; sourceTree = "<group>"; };
 		D07381F0183318AF008488E8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
+		D07384D518334DC6008488E8 /* progress_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = progress_bar.png; path = Resources/progress_bar.png; sourceTree = "<group>"; };
+		D07384D618334DC6008488E8 /* progress_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = progress_bg.png; path = Resources/progress_bg.png; sourceTree = "<group>"; };
+		D07384D918335CEA008488E8 /* SettingLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingLayer.cpp; sourceTree = "<group>"; };
+		D07384DA18335CEA008488E8 /* SettingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingLayer.h; sourceTree = "<group>"; };
 		D0E98E73180D2E9A00343CC9 /* testcocos2d-x.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "testcocos2d-x.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E98E76180D2E9A00343CC9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D0E98E78180D2E9A00343CC9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -782,6 +789,8 @@
 		D0E98E87180D2E9A00343CC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D07384D518334DC6008488E8 /* progress_bar.png */,
+				D07384D618334DC6008488E8 /* progress_bg.png */,
 				D07381F0183318AF008488E8 /* Default-568h@2x.png */,
 				D05F07B7182B5D6000A65227 /* game_music.mp3 */,
 				D05F07C9182B710A00A65227 /* static_data.plist */,
@@ -1625,6 +1634,8 @@
 				D05F07C4182B61DB00A65227 /* StaticData.h */,
 				D05F07C6182B6F1200A65227 /* PersonalAudioEngine.cpp */,
 				D05F07C7182B6F1200A65227 /* PersonalAudioEngine.h */,
+				D07384D918335CEA008488E8 /* SettingLayer.cpp */,
+				D07384DA18335CEA008488E8 /* SettingLayer.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1697,6 +1708,7 @@
 				D05F07BB182B5D6000A65227 /* enemy2_down.mp3 in Resources */,
 				D0E98E97180D2E9A00343CC9 /* Icon-Small@2x.png in Resources */,
 				D05F07CA182B710A00A65227 /* static_data.plist in Resources */,
+				D07384D818334DC6008488E8 /* progress_bg.png in Resources */,
 				D05F07BA182B5D6000A65227 /* enemy1_down.mp3 in Resources */,
 				D05F07BE182B5D6000A65227 /* game_music.mp3 in Resources */,
 				D0E98E8D180D2E9A00343CC9 /* Default.png in Resources */,
@@ -1705,6 +1717,7 @@
 				D02DFF311820DA0D00A48D71 /* gameArts-hd.plist in Resources */,
 				D05F07BC182B5D6000A65227 /* enemy2_out.mp3 in Resources */,
 				D02DFF331820DA0D00A48D71 /* gameArts.plist in Resources */,
+				D07384D718334DC6008488E8 /* progress_bar.png in Resources */,
 				D02DFF301820DA0D00A48D71 /* Marker Felt.ttf in Resources */,
 				D0E98E8B180D2E9A00343CC9 /* CloseSelected.png in Resources */,
 				D0E98E9B180D2E9A00343CC9 /* Icon@2x.png in Resources */,
@@ -1876,6 +1889,7 @@
 				D0E990CE180D2E9D00343CC9 /* CCControl.cpp in Sources */,
 				D0E98F33180D2E9B00343CC9 /* mat4stack.c in Sources */,
 				D0E98F56180D2E9B00343CC9 /* CCLabelBMFont.cpp in Sources */,
+				D07384DB18335CEA008488E8 /* SettingLayer.cpp in Sources */,
 				D0E99105180D2E9E00343CC9 /* CCTableView.cpp in Sources */,
 				D0E98F6D180D2E9B00343CC9 /* CCMenu.cpp in Sources */,
 				D0E98FEE180D2E9C00343CC9 /* CCShaderCache.cpp in Sources */,

@@ -483,6 +483,7 @@ void GameLayer::loadPlayer()
 
 
 
+
 CCPoint GameLayer::boundLayerPos(CCPoint newPos)
 {
     CCPoint retval = newPos;
@@ -862,5 +863,44 @@ void GameLayer::restartGame()
     this->loadPlayer();
     this->madeBullet();
     this->resetBullet();
+    
+}
+
+
+
+void GameLayer::pauseGame()
+{
+    this->unscheduleUpdate();
+    CCObject *nodeObj;
+    CCARRAY_FOREACH(this->getChildren(), nodeObj){
+        CCNode *node = (CCNode *)nodeObj;
+        node->stopAllActions();
+    }
+}
+
+void GameLayer::resumeGame()
+{
+    
+    
+    CCArray *playerActionArray = CCArray::create();
+    for (int i = 1 ; i<=2; i++) {
+        CCString* key = CCString::createWithFormat("hero_fly_%d.png", i);
+        //从内存池中取出Frame
+        CCSpriteFrame* frame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(key->getCString());
+        //添加到序列中
+        playerActionArray->addObject(frame);
+    }
+    CCLog("----------  %d",playerActionArray->count());
+    //将数组转化为动画序列,换帧间隔0.1秒
+    CCAnimation* animPlayer = CCAnimation::createWithSpriteFrames(playerActionArray, 0.1f);
+    //生成动画播放的行为对象
+    CCAnimate* actPlayer = CCAnimate::create(animPlayer);
+    //清空缓存数组
+    playerActionArray->removeAllObjects();
+    
+   
+    player->runAction(CCRepeatForever::create(actPlayer));
+    
+    this->scheduleUpdate();
     
 }

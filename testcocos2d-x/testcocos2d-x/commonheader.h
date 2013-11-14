@@ -20,4 +20,9 @@
 using namespace cocos2d;
 using namespace cocos2d::extension;
 
+typedef enum{
+    k_Operate_Pause = 0,
+    k_Operate_Resume
+}OperateFlag;
+
 #endif

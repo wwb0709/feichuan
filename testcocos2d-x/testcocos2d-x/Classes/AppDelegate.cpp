@@ -99,7 +99,7 @@ void AppDelegate::applicationDidEnterBackground()
     CCDirector::sharedDirector()->pause();
 
     // if you use SimpleAudioEngine, it must be paused
-CocosDenshion::SimpleAudioEngine::sharedEngine()->pauseBackgroundMusic();
+PersonalAudioEngine::sharedEngine()->pauseBackgroundMusic();
 }
 
 // this function will be called when the app is active again
@@ -108,5 +108,5 @@ void AppDelegate::applicationWillEnterForeground()
     CCDirector::sharedDirector()->resume();
     
     // if you use SimpleAudioEngine, it must resume here
-CocosDenshion::SimpleAudioEngine::sharedEngine()->resumeBackgroundMusic();
+PersonalAudioEngine::sharedEngine()->resumeBackgroundMusic();
 }
