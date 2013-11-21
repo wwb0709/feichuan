@@ -11,7 +11,8 @@
 
 #include <iostream>
 #include "commonheader.h"
-class welcomlayer : public CCLayer,public CCEditBoxDelegate
+#include "SocketEngine.h"
+class welcomlayer : public CCLayer,public CCEditBoxDelegate,public SoketEngineDelegate
 {
     
 public:
@@ -47,9 +48,19 @@ public:
     //当触发return后的回调函数
     virtual void editBoxReturn(CCEditBox* editBox);
     
+    
+    void SayHello();
+    
+    
+    virtual void recvData(char *content);
+    void createConte();
+    void updateTime();
 private:
     CCProgressTimer* progress1;
     CCLabelTTF* numsTTF;
+    
+//    char *msg;
+    CCString *msg;
 };
 
 #endif /* defined(__testcocos2d_x__welcomlayer__) */

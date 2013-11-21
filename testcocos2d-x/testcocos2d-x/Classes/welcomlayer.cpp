@@ -11,6 +11,7 @@
 #include "PersonalAudioEngine.h"
 #include "UserData.h"
 
+
 CCScene* welcomlayer::scene()
 {
     CCScene *scene = CCScene::create();
@@ -88,8 +89,8 @@ bool welcomlayer::init()
     scoreLabel->setColor(ccc3(65, 121, 183));
     scoreLabel->setAnchorPoint(ccp(0,1));
     scoreLabel->setScale(1.5);
-    scoreLabel->setPosition(CCPoint(winsize.width/2,100));
-    
+    scoreLabel->setPosition(CCPoint(10,100));
+    scoreLabel->setTag(2222);
     //this->scoreLabel->setString(CCString::createWithFormat("%u",score)->getCString());
     this->addChild(scoreLabel,4);
 //    
@@ -98,6 +99,61 @@ bool welcomlayer::init()
 //    PersonalAudioEngine::sharedEngine();
     
    this->addProgressBar();
+    
+    
+    
+    
+    
+    CCString* fontName = CCString::create("MarkerFelt-Thin");
+    CCMenuItemLabel* settingItem = CCMenuItemLabel::create(CCLabelTTF::create("发送", fontName->getCString(), 18), this, menu_selector(welcomlayer::SayHello));
+
+    settingItem->setPosition( ccp(WINDOWWIDTH/2, WINDOWHEIGHT-50) );
+    
+    // create menu, it's an autorelease object
+    CCMenu* pSettingMenu = CCMenu::create(settingItem, NULL);
+    pSettingMenu->setPosition( CCPointZero );
+    this->addChild(pSettingMenu,3);
+    
+    
+    
+//    //加入输入框
+//    
+//    CCSize size = CCDirector::sharedDirector()->getWinSize();
+//    CCScale9Sprite * sacel9SprY=CCScale9Sprite::create("boxbg.png");
+//    CCEditBox * box = CCEditBox::create(CCSizeMake(300,60), sacel9SprY);
+//    
+//    //    获取编辑框内的文字
+//    CCLOG("Text:%s",box->getText());
+//    box->setFontColor(ccc3(255, 0, 0));
+//    //    当编辑框中没有任何字符的提示
+//    box->setPlaceHolder("名字");
+//    CCLOG("PlaceHolder:%s",box->getPlaceHolder());
+//    //    最大输入文本长度
+//    box->setMaxLength(5);
+//    CCLOG("Length:%i", box->getMaxLength());
+//    //设置输入模式
+//    box->setInputFlag(kEditBoxInputFlagSensitive);
+//    //    设置return类型
+//    box->setReturnType(kKeyboardReturnTypeDone);
+//    box->setPosition(ccp(size.width*0.5, 220));
+//    box->setDelegate(this);
+//    box->setTag(113);
+//    addChild(box);
+//    
+//    CCScale9Sprite  * scale9SprG =CCScale9Sprite::create("boxbg.png");
+//    CCEditBox * box1 = CCEditBox ::create(CCSizeMake(300, 60), scale9SprG);
+//    box1->setPosition(ccp(size.width* 0.5, 120));
+//    box1->setFontColor(ccc3(255, 0, 0));
+//    box1->setPlaceHolder("密码");
+//    box1->setMaxLength(12);
+//    box1->setInputFlag(kEditBoxInputFlagPassword);
+//    box1->setReturnType(kKeyboardReturnTypeDone);
+//    box1->setDelegate(this);
+//    box1->setTag(112);
+//    addChild(box1);
+//
+    
+    
 
     return true;
     
@@ -130,41 +186,41 @@ bool welcomlayer::init()
     
     
     //加入输入框
-    
-    CCSize size = CCDirector::sharedDirector()->getWinSize();
-    CCScale9Sprite * sacel9SprY=CCScale9Sprite::create("boxbg.png");
-    CCEditBox * box = CCEditBox::create(CCSizeMake(300,60), sacel9SprY);
-
-    //    获取编辑框内的文字
-    CCLOG("Text:%s",box->getText());
-    box->setFontColor(ccc3(255, 0, 0));
-    //    当编辑框中没有任何字符的提示
-    box->setPlaceHolder("zhanghao");
-    CCLOG("PlaceHolder:%s",box->getPlaceHolder());
-    //    最大输入文本长度
-    box->setMaxLength(5);
-    CCLOG("Length:%i", box->getMaxLength());
-    //设置输入模式
-    box->setInputFlag(kEditBoxInputFlagSensitive);
-    //    设置return类型
-    box->setReturnType(kKeyboardReturnTypeDone);
-    box->setPosition(ccp(size.width*0.5, 220));
-    box->setDelegate(this);
-    box->setTag(113);
-    addChild(box);
-    
-    CCScale9Sprite  * scale9SprG =CCScale9Sprite::create("boxbg.png");
-    CCEditBox * box1 = CCEditBox ::create(CCSizeMake(300, 60), scale9SprG);
-    box1->setPosition(ccp(size.width* 0.5, 120));
-    box1->setFontColor(ccc3(255, 0, 0));
-    box1->setPlaceHolder("输入密码");
-    box1->setMaxLength(12);
-    box1->setInputFlag(kEditBoxInputFlagSensitive);
-    box1->setReturnType(kKeyboardReturnTypeGo);
-    box1->setDelegate(this);
-    box1->setTag(112);
-    addChild(box1);
-    box1->runAction(actionShake);
+//    
+//    CCSize size = CCDirector::sharedDirector()->getWinSize();
+//    CCScale9Sprite * sacel9SprY=CCScale9Sprite::create("boxbg.png");
+//    CCEditBox * box = CCEditBox::create(CCSizeMake(300,60), sacel9SprY);
+//
+//    //    获取编辑框内的文字
+//    CCLOG("Text:%s",box->getText());
+//    box->setFontColor(ccc3(255, 0, 0));
+//    //    当编辑框中没有任何字符的提示
+//    box->setPlaceHolder("zhanghao");
+//    CCLOG("PlaceHolder:%s",box->getPlaceHolder());
+//    //    最大输入文本长度
+//    box->setMaxLength(5);
+//    CCLOG("Length:%i", box->getMaxLength());
+//    //设置输入模式
+//    box->setInputFlag(kEditBoxInputFlagSensitive);
+//    //    设置return类型
+//    box->setReturnType(kKeyboardReturnTypeDone);
+//    box->setPosition(ccp(size.width*0.5, 220));
+//    box->setDelegate(this);
+//    box->setTag(113);
+//    addChild(box);
+//    
+//    CCScale9Sprite  * scale9SprG =CCScale9Sprite::create("boxbg.png");
+//    CCEditBox * box1 = CCEditBox ::create(CCSizeMake(300, 60), scale9SprG);
+//    box1->setPosition(ccp(size.width* 0.5, 120));
+//    box1->setFontColor(ccc3(255, 0, 0));
+//    box1->setPlaceHolder("输入密码");
+//    box1->setMaxLength(12);
+//    box1->setInputFlag(kEditBoxInputFlagSensitive);
+//    box1->setReturnType(kKeyboardReturnTypeGo);
+//    box1->setDelegate(this);
+//    box1->setTag(112);
+//    addChild(box1);
+//    box1->runAction(actionShake);
 
     
     
@@ -280,6 +336,31 @@ void welcomlayer::editBoxReturn(cocos2d::extension::CCEditBox* editBox)
     
     CCLOG("editBoxReturn--------content:%s tag:%d",editBox->getText(),editBox->getTag());
 }
+
+
+
+void welcomlayer::recvData(char *content) {
+    
+    CCLog(" welcomlayer::recvData %s",content);
+    if (msg) {
+        msg->release();
+    }
+    msg = CCString::createWithFormat("%s",content);
+    msg->retain();
+    this->scheduleOnce(schedule_selector(welcomlayer::createConte),0);
+
+//    scoreLabel->visit();
+
+}
+void welcomlayer::createConte()
+{
+    CCLabelTTF *scoreLabel = (CCLabelTTF *)this->getChildByTag(2222);
+    
+    
+    scoreLabel->setString(msg->getCString());
+    
+//    beginGame();
+}
 //void welcomlayer::onEnter()
 //{
 ////    CCScene *pScene = HelloWorld::scene();
@@ -372,8 +453,28 @@ void welcomlayer::updateProgressBar()
     
     
 }
+
+void welcomlayer::SayHello()
+{
+//    CCEditBox * name = (CCEditBox *)this->getChildByTag(113);
+//    CCEditBox * password = (CCEditBox *)this->getChildByTag(112);
+//    CCString *sendcontent = CCString::createWithFormat("name:%s password:%s",name->getText(),password->getText());
+////    numsTTF->setString(str->getCString());
+//    SocketEngine::sharedSocketEngine(this)->sendData(sendcontent->getCString());
+    
+    this->unschedule(schedule_selector(welcomlayer::updateTime));
+    this->schedule(schedule_selector(welcomlayer::updateTime),1);
+}
+
+void welcomlayer::updateTime()
+{
+SocketEngine::sharedSocketEngine(this)->sendData("getime");
+}
 void welcomlayer::beginGame()
 {
+    
+
+   
     CCLog("beginGame");
     
     //CCTransitionScene *trans = CCTransitionScene::create(2, level);

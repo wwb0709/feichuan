@@ -34,6 +34,17 @@
 		D07384D718334DC6008488E8 /* progress_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = D07384D518334DC6008488E8 /* progress_bar.png */; };
 		D07384D818334DC6008488E8 /* progress_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D07384D618334DC6008488E8 /* progress_bg.png */; };
 		D07384DB18335CEA008488E8 /* SettingLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D07384D918335CEA008488E8 /* SettingLayer.cpp */; };
+		D09931F21835BD0E001AA2F7 /* SocketEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D09931F01835BD0E001AA2F7 /* SocketEngine.cpp */; };
+		D09932011835BDB9001AA2F7 /* condition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D09931F41835BDB9001AA2F7 /* condition.cpp */; };
+		D09932021835BDB9001AA2F7 /* mutualexclusion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D09931F51835BDB9001AA2F7 /* mutualexclusion.cpp */; };
+		D09932031835BDB9001AA2F7 /* semaphore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D09931F71835BDB9001AA2F7 /* semaphore.cpp */; };
+		D09932041835BDB9001AA2F7 /* threadbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D09931F81835BDB9001AA2F7 /* threadbase.cpp */; };
+		D09932051835BDB9001AA2F7 /* threadexception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D09931F91835BDB9001AA2F7 /* threadexception.cpp */; };
+		D09932061835BDB9001AA2F7 /* ipaddress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D09931FB1835BDB9001AA2F7 /* ipaddress.cpp */; };
+		D09932071835BDB9001AA2F7 /* socketbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D09931FC1835BDB9001AA2F7 /* socketbase.cpp */; };
+		D09932081835BDB9001AA2F7 /* socketexception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D09931FE1835BDB9001AA2F7 /* socketexception.cpp */; };
+		D09932091835BDB9001AA2F7 /* tcpsockets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D09931FF1835BDB9001AA2F7 /* tcpsockets.cpp */; };
+		D099320A1835BDB9001AA2F7 /* udpsockets.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D09932001835BDB9001AA2F7 /* udpsockets.cpp */; };
 		D0E98E77180D2E9A00343CC9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E98E76180D2E9A00343CC9 /* QuartzCore.framework */; };
 		D0E98E79180D2E9A00343CC9 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E98E78180D2E9A00343CC9 /* OpenGLES.framework */; };
 		D0E98E7B180D2E9A00343CC9 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0E98E7A180D2E9A00343CC9 /* OpenAL.framework */; };
@@ -268,6 +279,20 @@
 		D07384D618334DC6008488E8 /* progress_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = progress_bg.png; path = Resources/progress_bg.png; sourceTree = "<group>"; };
 		D07384D918335CEA008488E8 /* SettingLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SettingLayer.cpp; sourceTree = "<group>"; };
 		D07384DA18335CEA008488E8 /* SettingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingLayer.h; sourceTree = "<group>"; };
+		D09931F01835BD0E001AA2F7 /* SocketEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SocketEngine.cpp; sourceTree = "<group>"; };
+		D09931F11835BD0E001AA2F7 /* SocketEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketEngine.h; sourceTree = "<group>"; };
+		D09931F41835BDB9001AA2F7 /* condition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = condition.cpp; sourceTree = "<group>"; };
+		D09931F51835BDB9001AA2F7 /* mutualexclusion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mutualexclusion.cpp; sourceTree = "<group>"; };
+		D09931F61835BDB9001AA2F7 /* pthreadcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pthreadcc.h; sourceTree = "<group>"; };
+		D09931F71835BDB9001AA2F7 /* semaphore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = semaphore.cpp; sourceTree = "<group>"; };
+		D09931F81835BDB9001AA2F7 /* threadbase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = threadbase.cpp; sourceTree = "<group>"; };
+		D09931F91835BDB9001AA2F7 /* threadexception.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = threadexception.cpp; sourceTree = "<group>"; };
+		D09931FB1835BDB9001AA2F7 /* ipaddress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ipaddress.cpp; sourceTree = "<group>"; };
+		D09931FC1835BDB9001AA2F7 /* socketbase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = socketbase.cpp; sourceTree = "<group>"; };
+		D09931FD1835BDB9001AA2F7 /* socketcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = socketcc.h; sourceTree = "<group>"; };
+		D09931FE1835BDB9001AA2F7 /* socketexception.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = socketexception.cpp; sourceTree = "<group>"; };
+		D09931FF1835BDB9001AA2F7 /* tcpsockets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tcpsockets.cpp; sourceTree = "<group>"; };
+		D09932001835BDB9001AA2F7 /* udpsockets.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = udpsockets.cpp; sourceTree = "<group>"; };
 		D0E98E73180D2E9A00343CC9 /* testcocos2d-x.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "testcocos2d-x.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0E98E76180D2E9A00343CC9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D0E98E78180D2E9A00343CC9 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -740,6 +765,34 @@
 			);
 			name = music;
 			path = Resources/music;
+			sourceTree = "<group>";
+		};
+		D09931F31835BDB9001AA2F7 /* pthreadcc */ = {
+			isa = PBXGroup;
+			children = (
+				D09931F41835BDB9001AA2F7 /* condition.cpp */,
+				D09931F51835BDB9001AA2F7 /* mutualexclusion.cpp */,
+				D09931F61835BDB9001AA2F7 /* pthreadcc.h */,
+				D09931F71835BDB9001AA2F7 /* semaphore.cpp */,
+				D09931F81835BDB9001AA2F7 /* threadbase.cpp */,
+				D09931F91835BDB9001AA2F7 /* threadexception.cpp */,
+			);
+			name = pthreadcc;
+			path = libs/extensions/network/pthreadcc;
+			sourceTree = "<group>";
+		};
+		D09931FA1835BDB9001AA2F7 /* socketcc */ = {
+			isa = PBXGroup;
+			children = (
+				D09931FB1835BDB9001AA2F7 /* ipaddress.cpp */,
+				D09931FC1835BDB9001AA2F7 /* socketbase.cpp */,
+				D09931FD1835BDB9001AA2F7 /* socketcc.h */,
+				D09931FE1835BDB9001AA2F7 /* socketexception.cpp */,
+				D09931FF1835BDB9001AA2F7 /* tcpsockets.cpp */,
+				D09932001835BDB9001AA2F7 /* udpsockets.cpp */,
+			);
+			name = socketcc;
+			path = libs/extensions/network/socketcc;
 			sourceTree = "<group>";
 		};
 		D0E98E6A180D2E9A00343CC9 = {
@@ -1596,6 +1649,8 @@
 		D0E9910A180D2E9E00343CC9 /* network */ = {
 			isa = PBXGroup;
 			children = (
+				D09931F31835BDB9001AA2F7 /* pthreadcc */,
+				D09931FA1835BDB9001AA2F7 /* socketcc */,
 				D0E9910B180D2E9E00343CC9 /* HttpClient.cpp */,
 				D0E9910D180D2E9E00343CC9 /* HttpClient.h */,
 				D0E9910E180D2E9E00343CC9 /* HttpRequest.h */,
@@ -1636,6 +1691,8 @@
 				D05F07C7182B6F1200A65227 /* PersonalAudioEngine.h */,
 				D07384D918335CEA008488E8 /* SettingLayer.cpp */,
 				D07384DA18335CEA008488E8 /* SettingLayer.h */,
+				D09931F01835BD0E001AA2F7 /* SocketEngine.cpp */,
+				D09931F11835BD0E001AA2F7 /* SocketEngine.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1733,9 +1790,11 @@
 			files = (
 				D05F07C2182B611E00A65227 /* UserData.cpp in Sources */,
 				D0E98FB2180D2E9C00343CC9 /* CCImage.mm in Sources */,
+				D09932091835BDB9001AA2F7 /* tcpsockets.cpp in Sources */,
 				D0E99065180D2E9D00343CC9 /* CCTouchHandler.cpp in Sources */,
 				D0E98F60180D2E9B00343CC9 /* CCScene.cpp in Sources */,
 				D0E99054180D2E9D00343CC9 /* CCTMXObjectGroup.cpp in Sources */,
+				D09932041835BDB9001AA2F7 /* threadbase.cpp in Sources */,
 				D0E98F3D180D2E9B00343CC9 /* plane.c in Sources */,
 				D0E98ED4180D2E9B00343CC9 /* CCAtlasNode.cpp in Sources */,
 				D0E9903A180D2E9D00343CC9 /* CCTextFieldTTF.cpp in Sources */,
@@ -1751,6 +1810,7 @@
 				D0E990AA180D2E9D00343CC9 /* CCLayerLoader.cpp in Sources */,
 				D0E98F70180D2E9B00343CC9 /* CCMenuItem.cpp in Sources */,
 				D0E98FB4180D2E9C00343CC9 /* CCLock.cpp in Sources */,
+				D09931F21835BD0E001AA2F7 /* SocketEngine.cpp in Sources */,
 				D0E98F5D180D2E9B00343CC9 /* CCLayer.cpp in Sources */,
 				D0E98EC1180D2E9A00343CC9 /* CCActionInterval.cpp in Sources */,
 				D0E99062180D2E9D00343CC9 /* CCTouchDispatcher.cpp in Sources */,
@@ -1783,6 +1843,7 @@
 				D0E99041180D2E9D00343CC9 /* CCTextureAtlas.cpp in Sources */,
 				D0E98F69180D2E9B00343CC9 /* CCTransitionProgress.cpp in Sources */,
 				D0E98EAC180D2E9A00343CC9 /* CCAction.cpp in Sources */,
+				D09932021835BDB9001AA2F7 /* mutualexclusion.cpp in Sources */,
 				D0E98EBB180D2E9A00343CC9 /* CCActionGrid3D.cpp in Sources */,
 				D0E98F49180D2E9B00343CC9 /* vec4.c in Sources */,
 				D0E99032180D2E9C00343CC9 /* ZipUtils.cpp in Sources */,
@@ -1802,6 +1863,7 @@
 				D0E99009180D2E9C00343CC9 /* base64.cpp in Sources */,
 				D0E99025180D2E9C00343CC9 /* TGAlib.cpp in Sources */,
 				D0E9905A180D2E9D00343CC9 /* CCTMXXMLParser.cpp in Sources */,
+				D09932081835BDB9001AA2F7 /* socketexception.cpp in Sources */,
 				D0E99044180D2E9D00343CC9 /* CCTextureCache.cpp in Sources */,
 				D0E98EB8180D2E9A00343CC9 /* CCActionGrid.cpp in Sources */,
 				D0E98EE3180D2E9B00343CC9 /* CCDrawingPrimitives.cpp in Sources */,
@@ -1809,6 +1871,7 @@
 				D0E98ED0180D2E9B00343CC9 /* CCActionTween.cpp in Sources */,
 				D0E98FD7180D2E9C00343CC9 /* CCScriptSupport.cpp in Sources */,
 				D0E990FF180D2E9E00343CC9 /* CCScrollView.cpp in Sources */,
+				D09932071835BDB9001AA2F7 /* socketbase.cpp in Sources */,
 				D0E99018180D2E9C00343CC9 /* ccUtils.cpp in Sources */,
 				D0E990DE180D2E9D00343CC9 /* CCControlSaturationBrightnessPicker.cpp in Sources */,
 				D0E9908F180D2E9D00343CC9 /* CCBSequenceProperty.cpp in Sources */,
@@ -1847,10 +1910,12 @@
 				D023FAE618224E47004B3CF7 /* CCFoePlane.cpp in Sources */,
 				D0E99118180D2E9E00343CC9 /* HelloWorldScene.cpp in Sources */,
 				D05F07C8182B6F1200A65227 /* PersonalAudioEngine.cpp in Sources */,
+				D09932051835BDB9001AA2F7 /* threadexception.cpp in Sources */,
 				D0E98F7E180D2E9B00343CC9 /* CCParticleBatchNode.cpp in Sources */,
 				D0E99075180D2E9D00343CC9 /* CocosDenshion.m in Sources */,
 				D0E98F2D180D2E9B00343CC9 /* aabb.c in Sources */,
 				D0E990E7180D2E9D00343CC9 /* CCControlSwitch.cpp in Sources */,
+				D09932061835BDB9001AA2F7 /* ipaddress.cpp in Sources */,
 				D0E98F9E180D2E9C00343CC9 /* CCAccelerometer.mm in Sources */,
 				D0E990D8180D2E9D00343CC9 /* CCControlHuePicker.cpp in Sources */,
 				D0E98F0F180D2E9B00343CC9 /* CCGrid.cpp in Sources */,
@@ -1867,6 +1932,7 @@
 				D0E990D4180D2E9D00343CC9 /* CCControlColourPicker.cpp in Sources */,
 				D0E98FDE180D2E9C00343CC9 /* ccGLStateCache.cpp in Sources */,
 				D0E990FC180D2E9E00343CC9 /* EditBoxImplIOS.mm in Sources */,
+				D09932031835BDB9001AA2F7 /* semaphore.cpp in Sources */,
 				D0E98EAF180D2E9A00343CC9 /* CCActionCamera.cpp in Sources */,
 				D0E99005180D2E9C00343CC9 /* CCSpriteFrameCache.cpp in Sources */,
 				D0E9904E180D2E9D00343CC9 /* CCTileMapAtlas.cpp in Sources */,
@@ -1888,6 +1954,7 @@
 				D05F07C5182B61DB00A65227 /* StaticData.cpp in Sources */,
 				D0E990CE180D2E9D00343CC9 /* CCControl.cpp in Sources */,
 				D0E98F33180D2E9B00343CC9 /* mat4stack.c in Sources */,
+				D099320A1835BDB9001AA2F7 /* udpsockets.cpp in Sources */,
 				D0E98F56180D2E9B00343CC9 /* CCLabelBMFont.cpp in Sources */,
 				D07384DB18335CEA008488E8 /* SettingLayer.cpp in Sources */,
 				D0E99105180D2E9E00343CC9 /* CCTableView.cpp in Sources */,
@@ -1903,6 +1970,7 @@
 				D0E98F63180D2E9B00343CC9 /* CCTransition.cpp in Sources */,
 				D0E98FDB180D2E9C00343CC9 /* CCGLProgram.cpp in Sources */,
 				D0E98EB2180D2E9A00343CC9 /* CCActionCatmullRom.cpp in Sources */,
+				D09932011835BDB9001AA2F7 /* condition.cpp in Sources */,
 				D0E9907E180D2E9D00343CC9 /* CCBAnimationManager.cpp in Sources */,
 				D0E98EF3180D2E9B00343CC9 /* CCDictionary.cpp in Sources */,
 				D0E98F35180D2E9B00343CC9 /* matrix.c in Sources */,

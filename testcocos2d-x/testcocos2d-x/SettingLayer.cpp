@@ -32,7 +32,14 @@ void SettingLayer::createMenu()
     
     CCMenuItemLabel* resume = CCMenuItemLabel::create(CCLabelTTF::create("继续", fontName->getCString(), fontSize), this, menu_selector(SettingLayer::resume));
     
-    CCMenuItemLabel* quit = CCMenuItemLabel::create(CCLabelTTF::create("退出", fontName->getCString(), fontSize), this, menu_selector(SettingLayer::quit));
+    CCMenuItemFont* quit = CCMenuItemFont::create("退出", this, menu_selector(SettingLayer::quit));
+    //为CCMenuItemFon添加一个颜色循环变化动画....item7也是父类CCNode的子类，自然也可以添加动画啦
+    CCActionInterval* color_action = CCTintBy::create(0.5f, 0, -255, -255);
+    CCActionInterval* color_back = color_action->reverse();
+    CCFiniteTimeAction* seq = CCSequence::create(color_action, color_back, NULL);
+    quit->runAction(CCRepeatForever::create((CCActionInterval*)seq));
+    
+//    CCMenuItemLabel* quit = CCMenuItemLabel::create(CCLabelTTF::create("退出", fontName->getCString(), fontSize), this, menu_selector(SettingLayer::quit));
     
     CCMenuItemLabel* soundOn = CCMenuItemLabel::create(CCLabelTTF::create("特效 开", fontName->getCString(), fontSize));
     CCMenuItemLabel* soundOff = CCMenuItemLabel::create(CCLabelTTF::create("特效 关", fontName->getCString(), fontSize));
