@@ -35,7 +35,8 @@ template  <typename  Rquest>
 void BaseRequestMsg<Rquest>::setRequestMessage(Rquest message){
 //	std::string data; 
 //	message.SerializeToString(&data);
-	this->requestMessage="test socket";
+    std::string data = message->m_sString;
+	this->requestMessage=data;
 }
 
 template  <typename  Rquest>

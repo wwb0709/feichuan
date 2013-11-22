@@ -68,9 +68,10 @@ void* ResPonseThread::threadFunc(void *arg){
                     if(length>6){
 						myl=length-6;
 						messbody=new char[myl];
-						csocket.Recv(messbody,myl,0);
+						int contentlen = csocket.Recv(messbody,myl,0);
                         cocos2d::CCLog("reciveData()===body : %s \n\n",messbody);
-                        if (thred->m_msglistener!=NULL&&thred->msgselector!=NULL) {
+                        if (contentlen>0&&thred->m_msglistener!=NULL&&thred->msgselector!=NULL) {
+                            
                             BaseResponseMsg* basmsg=new BaseResponseMsg();
                             basmsg->msg = messbody;
                             basmsg->code =code;

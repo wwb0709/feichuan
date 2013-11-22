@@ -209,6 +209,15 @@
 		D04C3B471839E06600977787 /* ConvertEndianUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D04C3B451839E06600977787 /* ConvertEndianUtil.cpp */; };
 		D04C3B491839E3DB00977787 /* send.png in Resources */ = {isa = PBXBuildFile; fileRef = D04C3B481839E3DB00977787 /* send.png */; };
 		D04C3B4F1839E59300977787 /* Chat_msg_req.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D04C3B4D1839E59300977787 /* Chat_msg_req.cpp */; };
+		D07AECB4183DB033008C5A55 /* json_internalarray.inl in Resources */ = {isa = PBXBuildFile; fileRef = D07AECAD183DB033008C5A55 /* json_internalarray.inl */; };
+		D07AECB5183DB033008C5A55 /* json_internalmap.inl in Resources */ = {isa = PBXBuildFile; fileRef = D07AECAE183DB033008C5A55 /* json_internalmap.inl */; };
+		D07AECB6183DB033008C5A55 /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D07AECAF183DB033008C5A55 /* json_reader.cpp */; };
+		D07AECB7183DB033008C5A55 /* json_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D07AECB0183DB033008C5A55 /* json_value.cpp */; };
+		D07AECB8183DB033008C5A55 /* json_valueiterator.inl in Resources */ = {isa = PBXBuildFile; fileRef = D07AECB1183DB033008C5A55 /* json_valueiterator.inl */; };
+		D07AECB9183DB033008C5A55 /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D07AECB2183DB033008C5A55 /* json_writer.cpp */; };
+		D07AECBA183DB033008C5A55 /* sconscript in Resources */ = {isa = PBXBuildFile; fileRef = D07AECB3183DB033008C5A55 /* sconscript */; };
+		D07AECBD183DB0BE008C5A55 /* MsgUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D07AECBB183DB0BE008C5A55 /* MsgUtil.cpp */; };
+		D07AECC0183DD307008C5A55 /* DTCursorTextField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D07AECBE183DD307008C5A55 /* DTCursorTextField.cpp */; };
 		D0A6EE87183B42E40059A546 /* ipaddress.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0A6EE81183B42E40059A546 /* ipaddress.cpp */; };
 		D0A6EE88183B42E40059A546 /* socketbase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0A6EE82183B42E40059A546 /* socketbase.cpp */; };
 		D0A6EE89183B42E40059A546 /* socketexception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0A6EE84183B42E40059A546 /* socketexception.cpp */; };
@@ -666,6 +675,26 @@
 		D04C3B481839E3DB00977787 /* send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = send.png; path = Resources/send.png; sourceTree = "<group>"; };
 		D04C3B4D1839E59300977787 /* Chat_msg_req.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Chat_msg_req.cpp; sourceTree = "<group>"; };
 		D04C3B4E1839E59300977787 /* Chat_msg_req.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chat_msg_req.h; sourceTree = "<group>"; };
+		D07AECA3183DB033008C5A55 /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
+		D07AECA4183DB033008C5A55 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		D07AECA5183DB033008C5A55 /* features.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = features.h; sourceTree = "<group>"; };
+		D07AECA6183DB033008C5A55 /* forwards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = forwards.h; sourceTree = "<group>"; };
+		D07AECA7183DB033008C5A55 /* json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json.h; sourceTree = "<group>"; };
+		D07AECA8183DB033008C5A55 /* reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reader.h; sourceTree = "<group>"; };
+		D07AECA9183DB033008C5A55 /* value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = value.h; sourceTree = "<group>"; };
+		D07AECAA183DB033008C5A55 /* writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = writer.h; sourceTree = "<group>"; };
+		D07AECAC183DB033008C5A55 /* json_batchallocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_batchallocator.h; sourceTree = "<group>"; };
+		D07AECAD183DB033008C5A55 /* json_internalarray.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_internalarray.inl; sourceTree = "<group>"; };
+		D07AECAE183DB033008C5A55 /* json_internalmap.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_internalmap.inl; sourceTree = "<group>"; };
+		D07AECAF183DB033008C5A55 /* json_reader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_reader.cpp; sourceTree = "<group>"; };
+		D07AECB0183DB033008C5A55 /* json_value.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_value.cpp; sourceTree = "<group>"; };
+		D07AECB1183DB033008C5A55 /* json_valueiterator.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_valueiterator.inl; sourceTree = "<group>"; };
+		D07AECB2183DB033008C5A55 /* json_writer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_writer.cpp; sourceTree = "<group>"; };
+		D07AECB3183DB033008C5A55 /* sconscript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sconscript; sourceTree = "<group>"; };
+		D07AECBB183DB0BE008C5A55 /* MsgUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MsgUtil.cpp; sourceTree = "<group>"; };
+		D07AECBC183DB0BE008C5A55 /* MsgUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MsgUtil.h; sourceTree = "<group>"; };
+		D07AECBE183DD307008C5A55 /* DTCursorTextField.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DTCursorTextField.cpp; sourceTree = "<group>"; };
+		D07AECBF183DD307008C5A55 /* DTCursorTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTCursorTextField.h; sourceTree = "<group>"; };
 		D0A6EE81183B42E40059A546 /* ipaddress.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ipaddress.cpp; sourceTree = "<group>"; };
 		D0A6EE82183B42E40059A546 /* socketbase.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = socketbase.cpp; sourceTree = "<group>"; };
 		D0A6EE83183B42E40059A546 /* socketcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = socketcc.h; sourceTree = "<group>"; };
@@ -1401,6 +1430,7 @@
 		D04C3A951839D9D000977787 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D07AECA1183DB033008C5A55 /* json */,
 				D04C3AE31839D9D100977787 /* cocos-ext.h */,
 				D04C3AE41839D9D100977787 /* ExtensionMacros.h */,
 				D04C3A961839D9D000977787 /* CCBReader */,
@@ -1583,8 +1613,52 @@
 				D04C3B4E1839E59300977787 /* Chat_msg_req.h */,
 				D0A6EE8C183B438D0059A546 /* MySocketThread.cpp */,
 				D0A6EE8D183B438D0059A546 /* MySocketThread.h */,
+				D07AECBB183DB0BE008C5A55 /* MsgUtil.cpp */,
+				D07AECBC183DB0BE008C5A55 /* MsgUtil.h */,
+				D07AECBE183DD307008C5A55 /* DTCursorTextField.cpp */,
+				D07AECBF183DD307008C5A55 /* DTCursorTextField.h */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		D07AECA1183DB033008C5A55 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				D07AECA2183DB033008C5A55 /* json */,
+				D07AECAB183DB033008C5A55 /* lib_json */,
+			);
+			name = json;
+			path = libs/extensions/json;
+			sourceTree = "<group>";
+		};
+		D07AECA2183DB033008C5A55 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				D07AECA3183DB033008C5A55 /* autolink.h */,
+				D07AECA4183DB033008C5A55 /* config.h */,
+				D07AECA5183DB033008C5A55 /* features.h */,
+				D07AECA6183DB033008C5A55 /* forwards.h */,
+				D07AECA7183DB033008C5A55 /* json.h */,
+				D07AECA8183DB033008C5A55 /* reader.h */,
+				D07AECA9183DB033008C5A55 /* value.h */,
+				D07AECAA183DB033008C5A55 /* writer.h */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		D07AECAB183DB033008C5A55 /* lib_json */ = {
+			isa = PBXGroup;
+			children = (
+				D07AECAC183DB033008C5A55 /* json_batchallocator.h */,
+				D07AECAD183DB033008C5A55 /* json_internalarray.inl */,
+				D07AECAE183DB033008C5A55 /* json_internalmap.inl */,
+				D07AECAF183DB033008C5A55 /* json_reader.cpp */,
+				D07AECB0183DB033008C5A55 /* json_value.cpp */,
+				D07AECB1183DB033008C5A55 /* json_valueiterator.inl */,
+				D07AECB2183DB033008C5A55 /* json_writer.cpp */,
+				D07AECB3183DB033008C5A55 /* sconscript */,
+			);
+			path = lib_json;
 			sourceTree = "<group>";
 		};
 		D0A6EE80183B42E40059A546 /* socketcc */ = {
@@ -1665,15 +1739,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D07AECB4183DB033008C5A55 /* json_internalarray.inl in Resources */,
 				D04C38B31839D9CE00977787 /* Icon.png in Resources */,
 				D04C39491839D9CF00977787 /* ChangeLog in Resources */,
+				D07AECBA183DB033008C5A55 /* sconscript in Resources */,
 				D04C38A31839D9CE00977787 /* CloseNormal.png in Resources */,
 				D04C38AF1839D9CE00977787 /* Icon-Small.png in Resources */,
 				D04C38AB1839D9CE00977787 /* Icon-72.png in Resources */,
 				D04C3B491839E3DB00977787 /* send.png in Resources */,
+				D07AECB8183DB033008C5A55 /* json_valueiterator.inl in Resources */,
 				D04C38A91839D9CE00977787 /* HelloWorld.png in Resources */,
 				D04C38AD1839D9CE00977787 /* Icon-Small-50.png in Resources */,
 				D04C38B71839D9CE00977787 /* iTunesArtwork in Resources */,
+				D07AECB5183DB033008C5A55 /* json_internalmap.inl in Resources */,
 				D04C38B11839D9CE00977787 /* Icon-Small@2x.png in Resources */,
 				D04C38A71839D9CE00977787 /* Default.png in Resources */,
 				D04C38A51839D9CE00977787 /* CloseSelected.png in Resources */,
@@ -1764,6 +1842,7 @@
 				D04C3A3F1839D9D000977787 /* TGAlib.cpp in Sources */,
 				D04C3A741839D9D000977787 /* CCTMXXMLParser.cpp in Sources */,
 				D04C3A5E1839D9D000977787 /* CCTextureCache.cpp in Sources */,
+				D07AECB6183DB033008C5A55 /* json_reader.cpp in Sources */,
 				D04C38D21839D9CE00977787 /* CCActionGrid.cpp in Sources */,
 				D04C38FD1839D9CE00977787 /* CCDrawingPrimitives.cpp in Sources */,
 				D0A6EE87183B42E40059A546 /* ipaddress.cpp in Sources */,
@@ -1796,6 +1875,7 @@
 				D04C3B471839E06600977787 /* ConvertEndianUtil.cpp in Sources */,
 				D04C38E41839D9CE00977787 /* CCActionProgressTimer.cpp in Sources */,
 				D0A6EE99183B4A2E0059A546 /* threadbase.cpp in Sources */,
+				D07AECB7183DB033008C5A55 /* json_value.cpp in Sources */,
 				D04C3A491839D9D000977787 /* unzip.cpp in Sources */,
 				D04C39511839D9CF00977787 /* mat3.c in Sources */,
 				D04C3AD41839D9D100977787 /* CCNodeLoaderLibrary.cpp in Sources */,
@@ -1843,6 +1923,7 @@
 				D04C3A941839D9D000977787 /* SimpleAudioEngine_objc.m in Sources */,
 				D04C39231839D9CE00977787 /* cocos2d.cpp in Sources */,
 				D04C3ADB1839D9D100977787 /* CCScale9SpriteLoader.cpp in Sources */,
+				D07AECBD183DB0BE008C5A55 /* MsgUtil.cpp in Sources */,
 				D04C39BB1839D9CF00977787 /* CCApplication.mm in Sources */,
 				D04C39731839D9CF00977787 /* CCLabelTTF.cpp in Sources */,
 				D04C3A421839D9D000977787 /* TransformUtils.cpp in Sources */,
@@ -1874,6 +1955,8 @@
 				D04C394F1839D9CF00977787 /* matrix.c in Sources */,
 				D04C3A911839D9D000977787 /* SimpleAudioEngine.mm in Sources */,
 				D04C39591839D9CF00977787 /* quaternion.c in Sources */,
+				D07AECC0183DD307008C5A55 /* DTCursorTextField.cpp in Sources */,
+				D07AECB9183DB033008C5A55 /* json_writer.cpp in Sources */,
 				D04C3B1C1839D9D100977787 /* CCSorting.cpp in Sources */,
 				D04C3ACA1839D9D100977787 /* CCMenuItemLoader.cpp in Sources */,
 				D04C39691839D9CF00977787 /* CCKeypadDispatcher.cpp in Sources */,
@@ -1958,7 +2041,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/wwb/Desktop/testsocket/testsocket/libs/cocos2dx/platform/third_party/ios/libraries,
+					/Users/wwb/Desktop/feichuan/testsocket/testsocket/libs/cocos2dx/platform/third_party/ios/libraries,
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",
@@ -1981,7 +2064,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/wwb/Desktop/testsocket/testsocket/libs/cocos2dx/platform/third_party/ios/libraries,
+					/Users/wwb/Desktop/feichuan/testsocket/testsocket/libs/cocos2dx/platform/third_party/ios/libraries,
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",

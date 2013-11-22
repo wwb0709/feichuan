@@ -3,6 +3,8 @@
 //#include "chat_msg_req.pb.h"
 #include "BaseRequestMsg.h"
 #include "ResPonseThread.h"
+#include "MsgUtil.H"
+#include "DTCursorTextField.h"
 USING_NS_CC;
 
 CCScene* HelloWorld::scene()
@@ -58,6 +60,40 @@ bool HelloWorld::init()
 //	cctextfiemsg->setPosition(ccp(origin.x + visibleSize.width/2,280));
 //	cctextfiemsg->attachWithIME();
 //	this->addChild(cctextfiemsg,2);
+    
+    
+//    CCSize size=CCDirector::sharedDirector()->getWinSize();
+//    
+//    CCTextFieldTTF *textField = CCTextFieldTTF::textFieldWithPlaceHolder("点出输入...","Helvetica", 24);
+//    
+//    textField->setPosition(ccp(size.width*0.5, size.height*0.7));
+//    textField->setColor(ccBLACK);
+//    addChild(textField);
+//    
+//    
+//    
+//    //绑定接口
+//    
+//    textField->setDelegate(this);
+//    
+//    //开启输入
+//    
+//    textField->attachWithIME();
+    
+    
+    CCSize size=CCDirector::sharedDirector()->getWinSize();
+    DTCursorTextField* textField = DTCursorTextField::textFieldWithPlaceHolder("点出输入...","Consolas", 24);
+    textField->setPosition(ccp(size.width*0.5, size.height*0.7));
+//    textField->openIME();
+    textField->setColor(ccBLACK);
+    textField->setLimitNum(100);
+    textField->setContentSize(CCSizeMake(200, 24));
+    textField->setDesignedSize(CCSizeMake(200, 24));
+    addChild(textField);
+    
+    
+    
+    
 	
 	ResPonseThread::GetInstance()->addmsgListenerEvent(callFunc_selectormsg(HelloWorld::msgCallBack),this);
 	
@@ -102,6 +138,8 @@ bool HelloWorld::init()
 
 void HelloWorld::menuSendCallback(CCObject* pSender)
 {
+    MsgUtil::paraseJson(MsgUtil::createJson());
+    return;
    	CCLabelTTF* lable=CCLabelTTF::create("ddddd","Arial",24);
 	BaseRequestMsg<cocos2d::CCString*>* baserlong=new BaseRequestMsg<cocos2d::CCString*>();
 	cocos2d::CCString* req = new CCString("hello。。。。");
@@ -168,4 +206,62 @@ void HelloWorld::createConte(float time){
 	}
 
 
+}
+
+
+//当用户启动虚拟键盘时的回调函数
+
+bool HelloWorld::onTextFieldAttachWithIME(CCTextFieldTTF *pSender)
+
+{
+    
+    CCLOG("启动输入");
+    
+   return false;
+    
+    //return true:不启动
+    
+}
+
+//当用户关闭虚拟键盘时的回调函数
+
+bool HelloWorld::onTextFieldDetachWithIME(CCTextFieldTTF *pSender)
+
+{
+    
+    CCLOG("关闭输入");
+    
+    return false;
+    
+    //return true:不关闭
+    
+}
+
+//当用户进行输入时的回调函数
+
+bool HelloWorld::onTextFieldInsertText(CCTextFieldTTF *pSender,const char *text,int nLen)
+
+{
+    
+    CCLOG("输入字符...");
+    
+    return false;
+    
+    //return true:不会输入进字符
+    
+    
+}
+
+//当用户删除文字时的回调函数
+
+bool HelloWorld::onTextFieldDeleteBackward(CCTextFieldTTF *pSender,const char *delText,int nLen)
+
+{
+    
+    CCLOG("删除字符");
+    
+    return false;
+    
+    //return true:不删除
+    
 }
